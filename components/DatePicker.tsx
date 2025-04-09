@@ -98,19 +98,11 @@ const DatePicker: React.FC<DatePickerProps> = ({ dateProps, onSelectDate }) => {
         <div className="absolute z-10 mt-2 left-[226px] bottom-[-245px] bg-white shadow-md rounded-[4px] border border-[] overflow-hidden text[#4F4F4F]">
           <DayPicker
             modifiersClassNames={{
-              selected: "bg-blue-500 text-white rounded-full", // Styling untuk hari yang dipilih
+              selected:
+                "bg-blue-500 text-white rounded-full border border-[#2F80ED]",
             }}
-            selectedDays={selectedDate}
+            selected={selectedDate || undefined}
             onDayClick={handleDayClick}
-            modifiers={{
-              selected: {
-                style: {
-                  border: "1px solid #2F80ED",
-                  borderRadius: "100px",
-                  color: "#fff",
-                },
-              },
-            }}
             numberOfMonths={1}
             captionLayout="dropdown"
             showOutsideDays
