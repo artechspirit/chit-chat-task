@@ -1,4 +1,4 @@
-import { Inbox } from "@/types";
+import { IMessage, Inbox } from "@/types";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
@@ -8,7 +8,7 @@ export const apiSlice = createApi({
     getMessages: builder.query<Inbox[], void>({
       query: () => "getMessages",
     }),
-    getMessagesById: builder.query<{ id: number }[], number>({
+    getMessagesById: builder.query<IMessage[], number>({
       query: (id) => `getMessages/${id}`,
     }),
   }),

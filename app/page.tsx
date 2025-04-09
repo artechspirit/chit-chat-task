@@ -55,7 +55,7 @@ export default function Home() {
             />
           )}
 
-          {showInboxChat && (
+          {showInboxChat && message && (
             <Chat
               data={message}
               isConnecting={isConnecting}
