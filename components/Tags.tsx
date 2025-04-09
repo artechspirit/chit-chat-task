@@ -61,7 +61,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon, tags, onSelectedTags }) => {
                 variant={tag.variant}
                 isFull
                 isSelected={tag.isSelected}
-                onTagClick={() => onSelectedTags(tag)}
+                onTagClick={() => onSelectedTags?.(tag)}
               />
             ))}
           </div>
